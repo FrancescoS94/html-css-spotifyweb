@@ -312,6 +312,10 @@ main .p-overlay i {
     font-size: 30px;
 }
 
+.p-center .p-play:hover {
+    font-size: 31px;
+}
+
 .bar {
     height: 2px;
     width: 350px;
@@ -329,6 +333,10 @@ main .p-overlay i {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.bar::after:hover {
+    background-color: red;
 }
 
 .p-center p {
@@ -395,13 +403,13 @@ main .p-overlay i {
 }
 
 /*  MEDIA QUERY PLAYER */
-@media all and (max-width: 1200px){
+@media all and (min-width: 992px) and (max-width: 1200px) {
     .bar {
         width: 300px;
     }
 }
 
-@media all and (max-width: 992px){
+@media all and (min-width: 768px) and (max-width: 992px){
     .bar {
         width: 110px;
     }
@@ -410,7 +418,6 @@ main .p-overlay i {
         width: 30px;
     }
 }
-
 
 @media all and (max-width: 768px){
     .bar {
