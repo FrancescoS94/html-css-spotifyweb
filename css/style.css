@@ -28,11 +28,12 @@
 aside {
     width: 250px;
     height: calc(100vh - 100px);
-    background-color: black;
+    background-color: #040404;
     float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: hidden;
 }
 
 aside .c-box img {
@@ -77,6 +78,7 @@ aside .c-box h4 {
     margin-left: 26px;
     margin-top: 15px;
     line-height: 1.9;
+    overflow-y: auto;
 }
 
 .c-box3 {
@@ -108,7 +110,7 @@ aside .c-box3 i {
 header {
     width: calc(100% - 250px);
     height: 90px;
-    background-color: #080808;
+    background-color: #090909;
     float: left;
 }
 
@@ -138,7 +140,8 @@ header .c-button button:hover {
 main {
     width: calc(100% - 250px);
     height: calc(100vh - 190px);
-    background-color:  #18171c;
+    /* background-color:  #18171c; */
+    background-image: linear-gradient(to bottom right, #18171c, rgba(77, 77, 82));
     float: left;
     overflow-y: auto;
 }
@@ -165,22 +168,59 @@ main .h-p1 h2 {
     margin-left: 28px;
 }
 
-/* C-MAIN-2 */
-.c-main-2 {
+/* C-MAIN-2-3-4 */
+.c-main-2,
+.c-main-3,
+.c-main-4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-.c-main-2 img {
+.c-main-2 img,
+.c-main-3 img,
+.c-main-4 img {
     height: 180px;
     width: auto;
+}
+
+.c-main-2 > div,
+.c-main-3 > div,
+.c-main-4 > div {
     margin-left: 28px;
 }
 
-.c-main-2 h3 {
+main .c-img {
+    position: relative;
+}
+
+main .p-overlay {
+    display: none;
+
+}
+
+.c-img:hover .p-overlay {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+main .p-overlay i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
     color: white;
-    margin-left: 28px;
+}
+
+.c-main-2 h3,
+.c-main-3 h3,
+.c-main-4 h3 {
+    color: white;
     text-align: center;
     margin-top: 10px;
 }
@@ -194,36 +234,18 @@ main .h-p1 h2 {
     margin-top: 5px;
 }
 
-.h-p2 h2 {
+.h-p2 h2,
+.h-p3 h2 {
     margin-top: 50px;
     margin-bottom: 5px;
     margin-left: 28px;
 }
 
-.h-p2 p {
+.h-p2 p,
+.h-p3 p {
     color: lightgray;
     margin-bottom: 20px;
     margin-left: 28px;
-}
-
-/* C-MAIN-3 */
-.c-main-3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.c-main-3 img {
-    height: 180px;
-    width: auto;
-    margin-left: 28px;
-}
-
-.c-main-3 h3 {
-    color: white;
-    margin-left: 28px;
-    text-align: center;
-    margin-top: 10px;
 }
 
 /* PLAYER */
@@ -235,6 +257,42 @@ main .h-p1 h2 {
     position: fixed;
     left: 0;
     bottom: 0;
+    display: flex;
+}
+
+.p-top {
+    display: flex;
+    flex: 0 0 200px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.player .p-top img {
+    height: 50px;
+    width: auto;
+}
+
+
+.p-center {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.p-center-1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.p-right {
+    display: flex;
+    flex: 0 0 200px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* MEDIA QUERY */
