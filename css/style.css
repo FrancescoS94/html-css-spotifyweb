@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .clearfix {
     content: '';
     display: table;
@@ -45,6 +49,7 @@ aside .c-box img {
     color: #b4b4b4;
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 aside .c-box i {
@@ -75,7 +80,7 @@ aside .c-box h4 {
 
 .c-box2 {
     color: #b4b4b4;
-    margin-left: 26px;
+    margin-left: 10px;
     margin-top: 15px;
     line-height: 1.9;
     overflow-y: auto;
@@ -128,7 +133,7 @@ header .c-button button {
     cursor: pointer;
     margin-top: 27px;
     margin-right: 10px;
-    /* transition: all 0.1s; */
+    transition: all 0.1s;
 }
 
 header .c-button button:hover {
@@ -140,7 +145,6 @@ header .c-button button:hover {
 main {
     width: calc(100% - 250px);
     height: calc(100vh - 190px);
-    /* background-color:  #18171c; */
     background-image: linear-gradient(to bottom right, #18171c, rgba(77, 77, 82));
     float: left;
     overflow-y: auto;
@@ -156,6 +160,7 @@ main .c-main-1 ul {
 
 main li a {
     color: #b4b4b4;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -277,6 +282,12 @@ main .p-overlay i {
     color: #b4b4b4;
 }
 
+.p-top p:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .p-top h3, p {
     margin-left: 15px;
     margin-right: 30px;
@@ -314,6 +325,7 @@ main .p-overlay i {
 
 .p-center .p-play:hover {
     font-size: 31px;
+    cursor: pointer;
 }
 
 .bar {
@@ -333,10 +345,6 @@ main .p-overlay i {
     position: absolute;
     left: 0;
     top: 0;
-}
-
-.bar::after:hover {
-    background-color: red;
 }
 
 .p-center p {
@@ -374,7 +382,7 @@ main .p-overlay i {
     top: 0;
 }
 
-/* MEDIA QUERY */
+/* MEDIA QUERY ASIDE */
 @media all and (max-width: 768px) {
     aside {
         width: 75px;
@@ -431,5 +439,4 @@ main .p-overlay i {
     .p-top i {
     margin: 0 16px;
     }
-
 }
